@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Erica+One);
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.newNoteInput {
+    opacity: 1 !important;
+    position: relative !important;
+    pointer-events: auto !important;
+}
+
+label {
+    color: black;
+    font-weight: 600;
+}
+
+.button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    will-change: box-shadow, transform;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    height: 48px;
+    padding: 0 32px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    max-width: 18vw;
+    margin: auto;
+    font-weight: 600;
+}
+
+.listCollection,
+.newNote {
+    margin: 10px;
+}
+
+.listCollection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+
+.collectionItem {
+    display: flex;
+    flex-direction: row;
+    box-shadow:
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 7px;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconContainer button,
+.iconContainer a {
+    margin: 7px 7px 7px 7px;
+    background-color: #fbca1f !important;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+.iconContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer button i,
+.iconContainer a i {
+    color: black;
+    font-size: 25px;
+}
+
+.fixed-action-btn #scale-demo {
+    background-color: #1E88E5 !important;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.nav-wrapper {
+    width: 100% !important;
+}
+
+#contenedorTextos {
+    margin-top: 20px;
+    color: white;
+    background-color: #1E88E5;
+    margin:0px;
+    /* height: 120px; */
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#contenedorTextos p {
+    padding: 0px 10px 0px 10px;
+    height: 60px;
+}
+
+#botonDesplegar {
+    height: 40px;
+    width: 50px;
+    background-color: #1E88E5;
+    box-shadow:
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    align-content: center;
+    margin: 12px 0px 0px 12px;
+}
+
+#botonDesplegar i {
+    color: white;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute !important;
+    z-index: 1 !important;
+    height: 66px !important;
+}
+
+.logo {
+    position: absolute;
+}
+
+#app {
+    width: 100% !important;
+    max-width: 9000px !important;
+}
+
+.menuContainer {
+    background-color: #1E88E5;
+    z-index: 2;
+}
+
+#texto2 {
+    cursor: pointer;
+}

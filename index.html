@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas</title>
+  <link rel="shortcut icon" href="icons/icon-96x96.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1E88E5">
+</head>
+
+<body>
+  
+
+
+  <main id="app" class="container">
+    <nav>
+
+      <div class="menuContainer">
+  
+        <button id="botonDesplegar">
+          <i class="material-icons">menu</i>
+        </button>
+  
+        <div id="contenedorTextos">
+          <p id="texto1" style="display:none;">Notas Creadas: {{noteCreated}}</p>
+          <p id="texto2" style="display:none;" @click="deleteEveryNote" >Borrar Todas</p>
+        </div>
+  
+      </div>
+  
+      <div class="nav-wrapper  blue darken-1">
+        <a href="#" class="logo">Mis notas</a>
+      </div>
+    </nav>
+
+    <div class="listCollection">
+    </div>
+
+
+    <!-- Modal -->
+    <div id="modal1" class="modal">
+
+      <div class="modal-content">
+        <h4>Nueva nota</h4>
+        <p>Escribe tu nota a continuación</p>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="ingresar-texto" v-model="note" class="materialize-textarea"></textarea>
+                <label for="ingresar-texto">Nota</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="btn-save" href="#" @click="guardarNotas(listNote)"
+          class="modal-close waves-effect waves-green btn-flat">Guardar</a>
+      </div>
+
+    </div>
+
+    <div id="modal2" class="modal">
+
+      <div class="modal-content">
+        <h4>Editar nota</h4>
+        <p>Edita tu nota a continuación</p>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="ingresar-texto" v-model="notaEditada" class="materialize-textarea"></textarea>
+                <label for="ingresar-texto">Nota</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="btn-save" href="#" @click="guardarEdicion"
+          class="modal-close waves-effect waves-green btn-flat">Guardar</a>
+        <a id="btn-save" href="#" @click="cancelarEdicion"
+          class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      </div>
+
+    </div>
+
+    <!-- Boton para abrir el modal (no tocar) -->
+    <div class="fixed-action-btn">
+
+      <a id="scale-demo" href="#modal1" class="modal-trigger btn-floating btn-large scale-transition waves-effect">
+        <i class="material-icons">add</i>
+      </a>
+
+    </div>
+
+
+
+  </main>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
